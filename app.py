@@ -32,6 +32,3 @@ def jadwal():
 	"jadwal": model.read()
 	}
 	return render_template('jadwal.html', data=json)
-
-if __name__=='__main__':
-	app.run(debug=True)
