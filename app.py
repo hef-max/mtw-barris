@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, flash
 from model import *
-import flask_heroku
 
 app = Flask(__name__, template_folder="templates")
 model = Model()
@@ -37,5 +36,3 @@ def jadwal():
 if __name__=='__main__':
 	app.secret_key = '_5#y2L"F4Q8z\n\xec]/'
 	app.run(debug=True)
-	
-flask_heroku.settings(locals())
