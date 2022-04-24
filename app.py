@@ -8,7 +8,7 @@ model = Model()
 def index():
 	json = {
 	"title"	: 'MTW-Barris',
-	"logo" : 'static/images/logo.jpg'
+	"logo" : '../static/images/logo.jpg'
 	}
 	if request.method == "POST":
 		name = request.form['name']
@@ -28,7 +28,7 @@ def index():
 def jadwal():
 	json = {
 	"title": 'MTW-Barris',
-	"logo": 'static/images/logo.jpg',
+	"logo": '../static/images/logo.jpg',
 	"jadwal": model.read()
 	}
 	return render_template('jadwal.html', data=json)
